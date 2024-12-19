@@ -49,7 +49,6 @@ A simple and interactive To-Do application with a backend built in Golang (Gin) 
 Before you begin, ensure you have the following installed:
 - Node.js (v14 or higher)
 - Go (v1.16 or higher)
-- PostgreSQL (v12 or higher)
 - Git
 
 ## 🛠️ Installation & Setup
@@ -63,13 +62,6 @@ bash
 Copy code
 cd backend
 
-# Create .env file with following variables
-DB_HOST=localhost
-DB_USER=your_db_user
-DB_PASSWORD=your_db_password
-DB_NAME=your_db_name
-DB_PORT=5432
-PORT=8080
 
 # Install Go dependencies
 go mod tidy
@@ -96,7 +88,6 @@ todo-application/
 │   └── public/              # Static files
 │
 └── backend/                 # Golang backend server
-    ├── config/              # Database configuration
     ├── controllers/         # Request handlers
     ├── models/              # Database models
     ├── routes/              # API routes
@@ -109,13 +100,6 @@ POST /api/tasks - Create a new task
 PUT /api/tasks/:id - Update a task
 DELETE /api/tasks/:id - Delete a task
 
-
-DB_HOST=localhost
-DB_USER=postgres
-DB_PASSWORD=your_password
-DB_NAME=todo_db
-DB_PORT=5432
-PORT=8080
 
 Frontend Configuration
 Tailwind configuration can be modified in tailwind.config.js
